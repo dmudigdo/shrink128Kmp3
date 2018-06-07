@@ -14,10 +14,11 @@ tracks = os.listdir('.')
 
 for track in tracks:
 
-    # Split filename into name + extension then check if it is a .m4a
+    # Split filename into name + extension then check if it is a .m4a or mp3
 
     splitname = os.path.splitext(track) 
 
+    # m4a:
     if splitname[1] == ".m4a":
         print ".m4a file found: " + splitname[0] + splitname[1]
 
@@ -30,16 +31,8 @@ for track in tracks:
         song.export(splitname[0] + ".mp3", format="mp3",  bitrate="128k")
 
     #endif
-#endfor
 
-# Loop through the filenames for m4a
-
-for track in tracks:
-
-    # Split filename into name + extension then check if it is a .m4a
-
-    splitname = os.path.splitext(track) 
-
+    # mp3:
     if splitname[1] == ".mp3":
         print ".mp3 file found: " + splitname[0] + splitname[1]
 
