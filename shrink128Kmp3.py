@@ -28,7 +28,7 @@ for track in tracks:
 
         # Export as 128Kbps MP3
 
-        song.export(splitname[0] + ".mp3", format="mp3",  bitrate="128k")
+        song.export(splitname[0] + "_128k.mp3", format="mp3",  bitrate="128k")
 
     #endif
 
